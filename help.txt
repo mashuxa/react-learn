@@ -1,0 +1,9 @@
+//Глобально установим установщик реакт шаблона
+npm install -g create-react-app
+
+//Создание шаблона
+create-react-app app-name
+
+//Оставляем в паблике только index.html
+//В src index.js и создаем папку components
+//В components создаем в отдельные js файлы компоненты
