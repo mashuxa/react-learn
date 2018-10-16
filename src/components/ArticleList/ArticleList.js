@@ -1,13 +1,13 @@
 import React from 'react';
-import Article from '../components/Article';
+import Article from '../Article/Article';
 
 
 export default function ArticleList({articles}) {
   const articleElement=articles.map(article => {
-    return <li key = {article._id}><Article article={article}/></li>;
+    return <li className="article-list__item" key = {article._id}><Article article={article}/></li>;
   });
   return (
-    <ul>
+    <ul className="article-list">
       {articleElement}
     </ul>
   );
