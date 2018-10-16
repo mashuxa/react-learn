@@ -1,5 +1,5 @@
 import React from 'react';
-import ArticleList from './components/ArticleList/ArticleList';
+import ArticleList from './components/ArticleList';
 import articles from './content/articles'
 
 export function App() {

@@ -1,0 +1,19 @@
+@import "../common/theme";
+@import "../common/mixin";
+
+.article {
+  @include block-style;
+
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 3px 0 $color-shadow-primary;
+
+  &__time {
+    font-style: italic;
+  }
+
+  &__header,
+  &__footer {
+    @include flex-block;
+  }
+}

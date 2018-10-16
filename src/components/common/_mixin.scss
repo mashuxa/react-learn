@@ -1,0 +1,29 @@
+@import "theme";
+
+@mixin block-style(
+  $color: $txt-color-primary,
+  $background-color: $bg-color-primary,
+  $font-size: 15px,
+  $line-height: 1,
+  $font-family: sans-serif
+) {
+  color: $color;
+  background-color: $background-color;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-family: $font-family;
+}
+
+@mixin flex-block (
+  $display: flex,
+  $flex-direction: row,
+  $justify-content: space-between,
+  $align-items: center,
+  $flex-wrap: wrap
+) {
+  display: $display;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-wrap: $flex-wrap;
+}

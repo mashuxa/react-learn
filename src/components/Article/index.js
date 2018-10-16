@@ -1,33 +1,36 @@
 import React, {Component} from 'react';
-// import {render} from 'react-dom';
+import './style.scss';
 
 
-export default class Article extends Component {
+export default class Index extends Component {
   state={
-    isOpen: true
+    isOpen: false
   };
 
   render() {
     const {article}=this.props;
     const content=this.state.isOpen && article.content;
+    const shortDescription= <p>{article.shortContent}</p>;
     return (
       <article className="article">
         <header className="article__header">
-          <time>01/01/2018</time>
+          <time className="article__time">01/01/2018</time>
+          <button onClick={this.handleClick}>
+            {this.state.isOpen ? 'Hide' : 'Show'}
+          </button>
         </header>
         <h2 className="article__header">{article.title}</h2>
         <div className="article__short-content">
-          <p>Some short content</p>
-          <button onClick={this.handleClick}>
-            {this.state.isOpen ? 'Close' : 'Open'}
-          </button>
+
+          {this.state.isOpen ? '' : shortDescription}
+
         </div>
         <div className="article__body">
           {content}
         </div>
         <footer className="article__footer">
-          <time>01/01/2018</time>
           <span className="article__author" rel="author">{article.author}</span>
+          <time className="article__time">01/01/2018</time>
         </footer>
       </article>
     );
